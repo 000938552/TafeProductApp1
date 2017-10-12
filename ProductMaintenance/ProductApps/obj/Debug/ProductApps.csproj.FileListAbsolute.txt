@@ -50,3 +50,4 @@ C:\MyProduct\TafeProductApp1\ProductMaintenance\ProductApps\obj\Debug\ProductApp
 C:\MyProduct\TafeProductApp1\ProductMaintenance\ProductApps\obj\Debug\ProductApps.g.resources
 C:\MyProduct\TafeProductApp1\ProductMaintenance\ProductApps\obj\Debug\ProductApps.Properties.Resources.resources
 C:\MyProduct\TafeProductApp1\ProductMaintenance\ProductApps\obj\Debug\ProductApps.csproj.GenerateResource.Cache
+C:\MyProduct\TafeProductApp1\ProductMaintenance\ProductApps\obj\Debug\ProductApps.csprojResolveAssemblyReference.cache

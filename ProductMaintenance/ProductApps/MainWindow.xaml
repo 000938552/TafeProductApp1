@@ -3,21 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="218*"/>
+        </Grid.RowDefinitions>
         <Label Content="Product:" HorizontalAlignment="Left" Height="30" Margin="46,37,0,0" VerticalAlignment="Top" Width="61"/>
-        <Label Content="Price $:" HorizontalAlignment="Left" Height="30" Margin="46,78,0,0" VerticalAlignment="Top" Width="61"/>
-        <Label Content="Quantity:" HorizontalAlignment="Left" Height="30" Margin="48,113,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.371,0.498"/>
-        <Label Content="Total Payment $:" HorizontalAlignment="Left" Height="30" Margin="46,160,0,0" VerticalAlignment="Top" Width="96"/>
-        <TextBlock Name="totalPaymentTextBlock" HorizontalAlignment="Left" Height="23" Margin="164,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Price $:" HorizontalAlignment="Left" Height="30" Margin="46,78,0,0" VerticalAlignment="Top" Width="61" Grid.RowSpan="2"/>
+        <Label Content="Quantity:" HorizontalAlignment="Left" Height="30" Margin="48,12,0,0" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.371,0.498" Grid.Row="1"/>
+        <Label Content="Total Payment $:" HorizontalAlignment="Left" Height="30" Margin="46,59,0,0" VerticalAlignment="Top" Width="96" Grid.Row="1"/>
+        <TextBlock Name="totalPaymentTextBlock" HorizontalAlignment="Left" Height="23" Margin="164,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" Grid.Row="1"/>
         <TextBox Name="productTextBox" HorizontalAlignment="Left" Height="24" Margin="122,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96"/>
-        <TextBox Name="priceTextBox" HorizontalAlignment="Left" Height="24" Margin="122,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
-        <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Height="24" Margin="122,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
-        <Button Name="calculateButton" Content="_Calculate" HorizontalAlignment="Left" Height="37" Margin="327,153,0,0" VerticalAlignment="Top" Width="122" Click="calculateButton_Click"/>
-        <Button Name="clearButton" Content="C_lear" HorizontalAlignment="Left" Height="34" Margin="327,209,0,0" VerticalAlignment="Top" Width="122" Click="clearButton_Click"/>
-        <Button Name="closeButton" Content="Cl_ose" HorizontalAlignment="Left" Height="34" Margin="327,264,0,0" VerticalAlignment="Top" Width="122" Click="closeButton_Click"/>
-        <Label Content="Adding the delivery Charge($25.00)" HorizontalAlignment="Left" Margin="20,228,0,0" VerticalAlignment="Top" Width="219"/>
-        <TextBlock Name ="TotalChargeTextBlock" HorizontalAlignment="Left" Margin="239,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="86"/>
-        <Label Content="Total charge after adding the wrapping cost" HorizontalAlignment="Left" Margin="46,264,0,0" VerticalAlignment="Top" Width="193"/>
-        <TextBox Name = "WrapTextBox" HorizontalAlignment="Left" Height="23" Margin="259,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="priceTextBox" HorizontalAlignment="Left" Height="24" Margin="122,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.RowSpan="2"/>
+        <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Height="24" Margin="122,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Row="1"/>
+        <Button Name="calculateButton" Content="_Calculate" HorizontalAlignment="Left" Height="37" Margin="327,52,0,0" VerticalAlignment="Top" Width="122" Click="calculateButton_Click" Grid.Row="1"/>
+        <Button Name="clearButton" Content="C_lear" HorizontalAlignment="Left" Height="34" Margin="327,108,0,0" VerticalAlignment="Top" Width="122" Click="clearButton_Click" Grid.Row="1"/>
+        <Button Name="closeButton" Content="Cl_ose" HorizontalAlignment="Left" Height="34" Margin="327,163,0,0" VerticalAlignment="Top" Width="122" Click="closeButton_Click" Grid.Row="1"/>
+        <Label Content="Adding the delivery Charge($25.00)" HorizontalAlignment="Left" Margin="20,127,0,0" VerticalAlignment="Top" Width="219" Grid.Row="1"/>
+        <TextBlock Name ="TotalChargeTextBlock" HorizontalAlignment="Left" Margin="239,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="86" Grid.Row="1"/>
+        <Label Content="Total charge after adding the wrapping cost" HorizontalAlignment="Left" Margin="46,163,0,0" VerticalAlignment="Top" Width="193" Grid.Row="1"/>
+        <TextBox Name = "WrapTextBox" HorizontalAlignment="Left" Height="23" Margin="259,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label Content="Total charge after GST@10%" HorizontalAlignment="Left" Margin="69,193,0,0" VerticalAlignment="Top" Height="21" Width="170" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox Name = "GSTtEXTbox" HorizontalAlignment="Left" Height="23" Margin="269,186,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" TextChanged="TextBox_TextChanged_1" Grid.Row="1"/>
 
 
     </Grid>

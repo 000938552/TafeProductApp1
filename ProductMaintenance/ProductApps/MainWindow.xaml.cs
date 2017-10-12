@@ -36,6 +36,7 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 TotalChargeTextBlock.Text = totalPaymentTextBlock.Text + "+ $25";
                 WrapTextBox.Text = totalPaymentTextBlock.Text + "+ $30";
+                GSTtEXTbox.Text = WrapTextBox.Text + "x 1.1 ";
             }
             catch (FormatException)
             {
@@ -56,5 +57,7 @@ namespace ProductApps
         {
             this.Close();
         }
+
+       
     }
 }
